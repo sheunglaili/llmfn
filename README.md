@@ -4,6 +4,16 @@ Write Typescript / JavaScript function with natural language
 
 ## Getting started
 
+```sh 
+# npm 
+npx jsr add @llmfn/llmfn
+
+# deno 
+deno add @llmfn/llmfn 
+# or import directly via
+import llmfn from "jsr:@llmfn/llmfn"
+```
+
 ```typescript
 import llmfn, { setup } from "@llmfn/llmfn"
 
