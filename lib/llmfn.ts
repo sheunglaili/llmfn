@@ -1,10 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
 
-import { Ajv } from "npm:ajv";
-import dedent from "npm:dedent";
+import { Ajv } from "ajv";
+import dedent from "dedent";
 
-import type { JSONSchemaType } from "npm:ajv";
+import type { JSONSchemaType } from "ajv";
 
 export type LLMFnConfiguration = {
   baseURL?: string;
@@ -117,7 +117,7 @@ export default function llmfn<Inputs extends any[], Output>(
 
   const codePath = path.resolve(`./generated/${id}.js`);
 
-  return async function (str: TemplateStringsArray, ...expr: any[]) {
+  return async function (str: TemplateStringsArray, ...expr: any[]): Promise<(...inputs: Inputs) => Output> {
     if (fs.existsSync(codePath)) {
       return await fn<Inputs, Output>(codePath, signature);
     }

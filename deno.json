@@ -8,5 +8,9 @@
             "test"
         ]
     },
+    "imports": {
+        "ajv": "npm:ajv@8.17.1",
+        "dedent": "npm:dedent@1.5.3"
+    },
     "unstable": ["broadcast-channel"]
 }
