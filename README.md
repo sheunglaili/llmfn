@@ -5,7 +5,7 @@ Write Typescript / JavaScript function with natural language
 ## Getting started
 
 ```typescript
-import llmfn, { setup } from "llmfn"
+import llmfn, { setup } from "@llmfn/llmfn"
 
 // set up configuration if you like to switch LLM Provider
 // defaults to ollama 
