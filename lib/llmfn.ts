@@ -108,7 +108,7 @@ async function fn<Inputs extends any[], Output>(
 
 export default function llmfn<Inputs extends any[], Output>(
   signature: LLMFnSignature<Inputs, Output>,
-) {
+): (str: TemplateStringsArray, ...expr: any[]) => Promise<(...inputs: Inputs) => Output> {
   const {
     inputs,
     output,
